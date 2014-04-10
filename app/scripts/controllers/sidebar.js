@@ -6,7 +6,8 @@ angular.module('gdgilSiteApp')
 			{title: 'GDG Israel', link: '/', icon: 'home'},
 			{title: 'About', link: '/about', icon: 'beer'},
 			{title: 'Videos', link: '/videos', icon: 'facetime_video'},
-			{title: 'Team', link: '/experts', icon: 'parents'}
+			{title: 'Team', link: '/experts', icon: 'parents'},
+			{title: 'Events', link: '/events', icon: 'fishes'},
 		];
 
 		$scope.isSelected = function (item) {

@@ -6,47 +6,7 @@
 
         <div class="row">
             <div class="widget" ng-controller="EventsCtrl">
-                <div class="widget-head">
-                    <div class="separator bottom">
-                        <span class="pull-left">
-                            <label class="strong"> Filter by:</label>
-                            <select ng-model='ownerSearch' ng-options="event.owner for event in events | unique:'owner' | orderBy:'owner'" class="selectpicker margin-none" data-style="btn-default btn-xs" style="border: none;">
-                                <option value="">Owner...</option>
-                            </select>
-                            <select ng-model='locationSearch' ng-options="event.location for event in events |  filter:ownerSearch.owner | unique:'location' | orderBy:'location'" class="selectpicker margin-none" data-style="btn-default btn-xs" style="border: none;">
-                                <option value="">Location...</option>
-                            </select>
-                        </span>
-
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-                <div class="widget-body padding-none">
-                    <table class="table table-condensed table-striped table-primary table-vertical-center checkboxs">
-                        <thead>
-                        <tr>
-                            <th class="">EVENT</th>
-                            <th class="">OWNER</th>
-                            <th class="">LOCATION</th>
-                            <th class="center">DATE</th>
-                            <th class="center"></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-
-                        <!-- Item -->
-                        <tr ng-repeat="event in events | filter:{owner:ownerSearch.owner, location:locationSearch.location}">
-                            <td class="">{{ event.name }}</td>
-                            <td class="">{{ event.owner }}</td>
-                            <td>{{ event.location }}</td>
-                            <td class="center">{{ event.date | date:'dd/MM/yyyy' }}</td>
-                            <td class="center"><a href="{{ event.link }}" target="_blank">Link</a></td>
-
-                        </tr>
-
-                        </tbody>
-                    </table>
-                </div>
+                <iframe src="https://www.google.com/calendar/embed?title=GDG%20Israel%20Events%20(Unified)&amp;showPrint=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23EAEAEA&amp;src=5n44ljbni6ufila17liuoo7utg%40group.calendar.google.com&amp;color=%235F6B02&amp;src=0ettl5q2pejj2vf0pjdriqc1q9asmcks%40import.calendar.google.com&amp;color=%238C500B&amp;src=162ptopnfpmn6a18072c7dkpeaciqa29%40import.calendar.google.com&amp;color=%230F4B38&amp;src=8i09hpgeaqf4q0frqo8rn08ffar0ci92%40import.calendar.google.com&amp;color=%2342104A&amp;src=ffuv5n09gsotd4sg22t349c0c43vshlu%40import.calendar.google.com&amp;color=%23711616&amp;src=s1jjnhvdi0qubl1r3k6fqlndmc247mdt%40import.calendar.google.com&amp;color=%23865A5A&amp;ctz=Asia%2FJerusalem" style=" border-width:0 " width=100% height=600 frameborder="0" scrolling="no"></iframe>
             </div>
             <!-- //  End Col -->
 
